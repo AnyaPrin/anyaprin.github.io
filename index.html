@@ -40,16 +40,11 @@
       letter-spacing: 2px;
     }
     main {
-      flex: 1;
-      width: 100%;
-      max-width: 600px;
-      margin-top: 40px;
-      padding: 32px 24px 24px 24px;
-      background: var(--panel-color);
-      border-radius: 16px;
-      box-shadow: var(--shadow);
-      border: 1px solid var(--border-color);
-      text-align: left;
+	width: 100%;
+	max-width: 600px;
+	margin-top: 40px;
+	padding: 32px 24px 24px 24px;
+	text-align: center;
     }
     h2 {
       color: var(--accent-blue);
@@ -57,26 +52,24 @@
       margin-bottom: 0.8em;
     }
     p {
-      font-size: 6pt;
+      font-size: 9pt;
       line-height: 1.7;
       margin-bottom: 1.5em;
-      font-family: 'Meiryo UI';
       margin-left:2.4em;      
-      }
-    .container {
-      display: flex;
-      flex: 1;
-      width: 400px;
-      max-width: 600px;
-      margin-top: 40px;
-      padding: 32px 24px 24px 24px;
-      background: var(--panel-color);
-      border-radius: 16px;
-      box-shadow: var(--shadow);
-      border: 1px solid var(--border-color);
-      text-align: left;
     }
-    
+    .container {
+	display: flex;
+	flex-direction: column;
+	width: 400px;
+	max-width: 400px;
+	margin-top: 20px;
+	padding: 16px 12px 12px 12px;
+	background: var(--panel-color);
+	border-radius: 6px;
+	box-shadow: var(--shadow);
+	border: 1px solid var(--border-color);
+	text-align: left;
+    }
     .btn {
       display: inline-block;
       padding: 0.3em 1em; 
@@ -111,42 +104,66 @@
         padding: 24px 0 12px 0;
       }
     }
+    .horizontal {
+	display:flex;
+	width: 500px;
+	max-width: 600px;
+	margin-top: 20px;
+	padding: 16px 12px 12px 12px;
+	text-align: left;
+	gap: 20px;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>    <img width="200" src="imgs/GithubProfile.png"> Anya's Confectionery 工事中</h1>
-    <P>小さなゲームでなるべくわけのわからないものを作っていく予定。<br> 目立たぬようヒッソリとやっていきたい|ω")</p>
-    
-    
+    <h1>
+      <img width="160" src="imgs/GithubProfile.png">
+      Anya's Confectionery 工事中
+      <P>小さなゲームでなるべくわけのわからないものを作っていく予定。<br> 目立たぬようヒッソリとやっていきたい|ω")</p>
+    </h1>
   </header>
   <main>
-    <div class='container'>
-    <a class="btn" href="https://anyaprin.github.io/TEST02" target="_blank" rel="noopener">NyaLIZA</a> ELIZA劣化版(''ω'')
-    <img width=400 src="TEST02/test02.jpg">
+    <div class='horizontal'>
+      <div class='container'>
+	<a class="btn" href="https://anyaprin.github.io/WebAppTest2"
+	   target="_blank" rel="noopener">
+	  <img width=200 src="GoldTartarGate.png">GATE OF GOLDEN TARTAR</a>
+	<p>作りかけが放置してある物置部屋</p>
+      </div>
+      <div class='container'>
+	<a class="btn" href="https://anyaprin.github.io/TEST02"target="_blank" rel="noopener">	
+	  <img width=200 src="GoldTartarGate.png">NyaLIZA</a>
+	    <P>劣化版ELIZAです</P>
+      </div>
+      <div class='container'>
+      <a class="btn" href="https://anyaprin.github.io/SaveTheOracle" target="_blank" rel="noopener">
+	<img width=200 src="GoldTartarGate.png">Save The Oracle</a>
+      <p>python版は出来てるんだけど、web版製作中（放置中ともいう(;'∀')）
     </div>
-    <div>
-    <a class="btn" href="https://anyaprin.github.io/WebAppTest2" target="_blank" rel="noopener">GATE OF GOLDEN TARTAR</a> 工事中
-    <img width=400 src="GoldTartarGate.png"><br>
     </div>
+  <hr>    
     <div class='container'>
-    <a class="btn" href="https://anyaprin.github.io/SaveTheOracle" target="_blank" rel="noopener">Save The Oracle</a> 工事中
+      <a class="btn" href="https://www.youtube.com/channel/UCGXwU84wrTfxenv-3RI2w6w"
+	 target="_blank" rel="noopener">YOUTUBE サイト</a>
+      <iframe width="200"
+	      src="https://www.youtube.com/embed/X1dOWWNB5pY?si=xDzCXR-XttL_Cr-P" 
+	      title="YouTube video player"
+	      frameborder="0" 
+	      allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+		     gyroscope; picture-in-picture; web-share" 
+	      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+      </iframe>
+      <br> &copy; SQURE ENIX
     </div>
-    <div class='container'>
-    <a class="btn" href="https://www.youtube.com/channel/UCGXwU84wrTfxenv-3RI2w6w" target="_blank" rel="noopener">YOUTUBE</a>
-    <iframe width="400" height="225"
-      src="https://www.youtube.com/embed/X1dOWWNB5pY?si=xDzCXR-XttL_Cr-P" 
-      title="YouTube video player" frameborder="0" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <br> &copy; SQURE ENIX
-            </div>
 
   </main>
-    <hr>
+  <hr>
   <footer>
-    <a class="btn" href="https://github.com/" target="_blank" rel="noopener"><img width="20" src="imgs/github-mark-white.png"> GitHub </a> 
-    <a class="btn" href="https://github.com/AnyaPrin" target="_blank" rel="noopener"> &copy; 2025 AnyaPrin / Powered by GitHub Pages </a>
+    <a class="btn" href="https://github.com/" target="_blank" rel="noopener">
+      <img width="20" src="imgs/github-mark-white.png"> GitHub </a> 
+    <a class="btn" href="https://github.com/AnyaPrin" target="_blank" rel="noopener">
+      &copy; 2025 AnyaPrin / Powered by GitHub Pages </a>
   </footer>
 </body>
 </html>
