@@ -1,172 +1,124 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <link rel="icon" type="image/png" href="img/anya.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anya Prin GitHub</title>
+    <title>Door Effect</title>
     <style>
-      :root {
-	  --link: #92b2c8;
-	  --menu: #92b2c8;	  
-	  --bg: #091124;
-	  --panel: #2d333b;
-	  --panela: rgba(0,0,0,0.15);
-	  --text: #ffffff;
-	  --acc-b: #2f81f7;
-	  --acc-g: #2d333b;
-	  --border: #444c56;
-	  --shadow: 0 4px 24px 0 rgba(0,0,0,0.15);
-      }
       body {
-	  background: var(--bg);
-	  color: var(--text);
-	  font-family: 'Segoe UI', 'Meiryo', 'Arial', sans-serif;
-	  margin: 24px;
-	  min-height: 100vh;
-	  padding: 40px;
- 	  border:40px;	  
+          margin: 0;
+          font-family: sans-serif;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          background-color: #000;
       }
-      header,main,footer {
-	  width:100%;	  
-	  background: var(--panel);
-	  box-shadow: var(--shadow);	  
-	  border-bottom: var(--border);
-	  border-radius: 14px;
-	  padding:20px;
- 	  border:40px;
-	  margin:24px;
-	  z-index: 10;	  
+      .main-content {
+          color:aliceblue;
+          text-align: center;
+          z-index: 1; 
       }
-      header { 	  top: 0%; height:1%}
-      main   { 	  top: 10%; height:60%;}
-      footer { 	  top: 90%;}
-      a {
-	  background: var(--ac-g);
-	  color: var(--link);	  
+      .door-container {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          overflow: hidden;
+          z-index: 10;
+          pointer-events: none;
       }
-      #menuBtn {
-	  background: var(--bg);
-	  color: var(--menu);
-	  position: fixed;
-	  top: 14%;
-	  right: 0px;
-	  border: none;
-	  padding: 15px 20px;
-	  cursor: pointer;
-	  z-index: 30;
-	  transition: background 0.2s ease;
-	  font-size: 0.9rem;
-	  box-shadow: var(--shadow); 
+      .door {
+          position: absolute;
+          top: 50%;
+          height: 100vh;
+          background-repeat: no-repeat;
+          background-color: #333;
+          transition: transform 1s cubic-bezier(.77,0,.18,1);
+          pointer-events: auto;
       }
-      #menuBtn:hover {
-	  background: var(--acc-b);
-      }      
-      #sidebar {
-	  display: flex;	  
-	  flex-direction: column;
-	  position: fixed;
-	  top: 14%;
-	  right: 00px;
-	  width: 250px;
-	  height: 100vh;
-	  background: var(--panela);
-	  color: var(--text);
-	  padding-top: 60px;
-	  transform: translateX(200%);	  
-	  transition: transform 0.3s ease;
-	  z-index: 10;	  
+      .left-door, .right-door {
+          width: 0;
       }
-      #sidebar.active {
-	  transform: translateX(0);
+      .left-door {
+          left: 50%;
+          transform: translate(-100%, -50%) translateX(0);
       }
-      #sidebar a {
-	  padding: 15px 20px;
-	  text-decoration: none;
-	  color: var(--text);	  	  
+      .right-door {
+          left: 50%;
+          transform: translate(0, -50%) translateX(0);
       }
-      #sidebar a:hover {
-	  background-color: var(--acc-b);
+      .left-door.open {
+          transform: translate(-100%, -50%) translateX(-100%);
       }
-      #mainFrame {
-	  margin-right: 250px;
-	  border: none;	  
-	  width: 100%;
-	  height: 100vh;
-	  transition: margin-left 0.3s ease;
+      .right-door.open {
+          transform: translate(0, -50%) translateX(100%);
       }
-      .btn {
-	  display: inline-block;
-	  padding: 0.2em 0.2em; 
-	  color: var(--text);
-	  background: var(--acc-g);
-	  border-radius: 3px;
-	  font-size: 0.81rem;
-	  font-weight: bold;
-	  text-decoration: none;
-	  box-shadow: var(--shadow);
-	  transition: background 0.2s;
-	  cursor: pointer;
-	  gap:12px;
+      #toggle-door-button {
+          position: fixed;
+          bottom: 10px;
+          right: 10px;  
+          z-index: 20;
+          margin: 10px;
+          cursor: pointer;
       }
-      @media (max-width: 700px) {
-	  main {
-              max-width: 95vw;
-              padding: 20px 4vw;
-	  }
-	  header {
-              padding: 24px 0 12px 0;
-	  }
-      }
-    </style>
+    </style>    
   </head>
   <body>
-    <header> Anya's Confectionery -- Always Under Construction
-      <img height="40px" width="40px" src="img/GithubProfile.png">	      
-    </header>
-    <main>
-      <button id="menuBtn" class="btn">	MENU </button>
+    <div class="main-content">
+      <main>
       <div id="sidebar" >
-	<a target="main" href="project/goldentartargate/">
 	  Gate Of Golden Tartar
-	  <img height=20 src="img/tartargate.png"></a>
-	<a target="main" href="project/nyaliza/">
-	  Nyal-LIZA
-	  <img height=20 src="img/dungeonwalking.png"></a>
-	<a target="mainFrame" href="project/dungeonWalking/dungeon0.2.5.html">
-	  Hiroshi and his forty merries
-	  <img height=20 src="img/dungeonwalking.png"></a>
-	<a target="mainFrame" href="project/savetheoracle/">
-	  Save The Oracle	  
-	  <img height=20 src="img/savetheoracle.png"></a>
-	<a class="btn" href="https://www.youtube.com/channel/UCGXwU84wrTfxenv-3RI2w6w">
-	  <div src="https://www.youtube.com/embed/X1dOWWNB5pY?si=xDzCXR-XttL_Cr-P"
-	       width="194" height="108" frameborder="1"  
-	       title="YouTube video player"
-	       allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-		      gyroscope; picture-in-picture; web-share" 
-	       referrerpolicy="strict-origin-when-cross-origin">
-	  </div>	    
-	  youtube
-	</a>
+	  <img src="img/tartargate.png"></a>
       </div>
-      <iframe id="mainFrame" name="mainFrame" src="project/goldentartargate/"
-	      style="border:none;"></iframe>
     </main>    
-    <footer>
-      <a class="btn" href="https://github.com/AnyaPrin" target="_blank" rel="noopener">
-	&copy; 2025 AnyaPrin / Powered by GitHub Pages </a>
-      <a class="btn" href="https://github.com/" target="_blank" rel="noopener">
-	<img width="20" src="img/github-mark-white.png"> GitHub </a> 
-    </footer>
+    </div>
+    <div class="door-container">
+      <div id="left-door" class="door left-door"></div>
+      <div id="right-door" class="door right-door"></div>
+    </div>
+    <div id="tartar-check-container"></div>
+    <img id="toggle-door-button" src="../favicon.ico" alt="Toggle Door" width="32" height="32" style="display:none;">
+    <script src="tartarcheck.js"></script>
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
-          const b = document.getElementById('menuBtn');
-	  const m = document.getElementById('sidebar');
-	  b.addEventListener('click', () => {
-	      m.classList.toggle('active');
-	  });
-      });	  
+      document.addEventListener("DOMContentLoaded", () => {
+          const leftDoor = document.getElementById("left-door");
+          const rightDoor = document.getElementById("right-door");
+          const toggleButton = document.getElementById("toggle-door-button");
+          let isOpen = false;
+          let imgAspect = 1920 / 1080; 
+          const img = new window.Image();
+          img.src = '../img/gate.png';
+          img.onload = function() {
+              imgAspect = img.naturalWidth / img.naturalHeight;
+              leftDoor.style.backgroundImage = `url('${img.src}')`;
+              rightDoor.style.backgroundImage = `url('${img.src}')`;
+              resizeDoors();
+          };
+
+          function resizeDoors() {
+              const winH = window.innerHeight;
+              const imgW = Math.round(winH * imgAspect);
+              const doorW = Math.floor(imgW / 2);
+              const rightDoorW = imgW - doorW;
+
+              leftDoor.style.width = doorW + "px";
+              rightDoor.style.width = rightDoorW + "px";
+              leftDoor.style.backgroundSize = imgW + "px " + winH + "px";
+              rightDoor.style.backgroundSize = imgW + "px " + winH + "px";
+              leftDoor.style.backgroundPosition = "left center";
+              rightDoor.style.backgroundPosition = "-" + doorW + "px center";
+          }
+
+          window.addEventListener("resize", resizeDoors);
+
+          toggleButton.addEventListener("click", () => {
+              leftDoor.classList.toggle("open");
+              rightDoor.classList.toggle("open");
+              isOpen = !isOpen;
+          });
+      });
     </script>
   </body>
 </html>
