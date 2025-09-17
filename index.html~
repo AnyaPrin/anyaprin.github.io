@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Door Effect</title>
+    <style>
+      body {
+          margin: 0;
+          font-family: sans-serif;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          background-color: #000;
+      }
+      .main-content {
+          color:aliceblue;
+          text-align: center;
+          z-index: 1; 
+      }
+      .door-container {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          overflow: hidden;
+          z-index: 10;
+          pointer-events: none;
+      }
+      .door {
+          position: absolute;
+          top: 50%;
+          height: 100vh;
+          background-repeat: no-repeat;
+          background-color: #333;
+          transition: transform 1s cubic-bezier(.77,0,.18,1);
+          pointer-events: auto;
+      }
+      .left-door, .right-door {
+          width: 0;
+      }
+      .left-door {
+          left: 50%;
+          transform: translate(-100%, -50%) translateX(0);
+      }
+      .right-door {
+          left: 50%;
+          transform: translate(0, -50%) translateX(0);
+      }
+      .left-door.open {
+          transform: translate(-100%, -50%) translateX(-100%);
+      }
+      .right-door.open {
+          transform: translate(0, -50%) translateX(100%);
+      }
+      #toggle-door-button {
+          position: fixed;
+          bottom: 10px;
+          right: 10px;  
+          z-index: 20;
+          margin: 10px;
+          cursor: pointer;
+      }
+    </style>    
+  </head>
+  <body>
+    <div class="main-content">
+      <main>
+      <div id="sidebar" >
+	  Gate Of Golden Tartar
+	  <img src="img/tartargate.png"></a>
+      </div>
+      <div class='container'>
+	<a class="btn" href="https://anyaprin.github.io/TEST02"target="_blank" rel="noopener">	
+	  <img width=200 src="https://anyaprin.github.io/TEST02/test02.jpg">NyaLIZA</a>
+	    <P>猫に退行したELIZA</P>
+     	 </div>
+			      <div class='container'>
+	<a class="btn" href="https://anyaprin.github.io/WebAppTest2/dungeon0.2.5.html" target="_blank" rel="noopener">	
+	  <img width=200 src="https://anyaprin.github.io/imgs/dungeonwalking.png">ヒロシと40人の仲間たち</a>
+	    <P>ヒロシが迷宮内に潜む40人の仲間たちを探すゲーム……になる予定。いまはまだαバージョン以前です。なにも起きません(*´з`)</P>
+      </div>
+
+<!-- //
+	<div class='container'>	  
+      <a class="btn" href="https://anyaprin.github.io/SaveTheOracleWeb" target="_blank" rel="noopener">
+	  <img height=200 src="imgs/SaveTheOracle.png"> Save The Oracle Web</a>
+      <p> FF14漆黒編テーマで作った Klotski パズル（「箱入り娘」）ゲーム (minfilia JS version 1.2)
+    </div>
+-->
+	  <br><br><br><br>
+   </main>
+	<footer>
+	  <hr>
+	      <a class="btn" href="https://www.youtube.com/channel/UCGXwU84wrTfxenv-3RI2w6w"
+	 target="_blank" rel="noopener">
+			  <iframe width="194" height="108"
+	      src="https://www.youtube.com/embed/X1dOWWNB5pY?si=xDzCXR-XttL_Cr-P" 
+	      title="YouTube video player" frameborder="1" 
+	      allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+		     gyroscope; picture-in-picture; web-share" 
+	      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+      </iframe>		  </a>
+		<p>YouTube Channel <br>FF11,FF14のファン動画とかがあります</p>
+		<br>
+	    <a class="btn" href="https://github.com/" target="_blank" rel="noopener">
+      <img width="20" src="imgs/github-mark-white.png"> GitHub </a> 
+		<a class="btn" href="https://github.com/AnyaPrin" target="_blank" rel="noopener">
+      &copy; 2025 AnyaPrin / Powered by GitHub Pages </a>
+  </footer>
+</body>
+</html>

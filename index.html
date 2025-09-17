@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-	  <link rel="icon" type="image/png" href="imgs/anya.png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Anya Prin GitHub</title>
@@ -18,7 +17,6 @@
     body {
       background: var(--bg-color);
       color: var(--text-color);
-      font-family: 'Segoe UI', 'Meiryo', 'Arial', sans-serif;
       margin: 24px;
       min-height: 100vh;
       display: flex;
@@ -27,13 +25,13 @@
       padding: 40px, 40px, 40px, 40px; 
     }
     header {
-      width: 100%;
-      background: var(--panel-color);
-      padding: 16px 0 8px 0;
-      box-shadow: var(--shadow);
-      text-align: left;
-      border-bottom: 1px solid var(--border-color);
-      border-radius: 6px;
+	width: 100%;
+	background: var(--panel-color);
+	padding: 16px 0 8px 0;
+	box-shadow: var(--shadow);
+	text-align: left;
+	border-bottom: 1px solid var(--border-color);
+	border-radius: 6px;
     }
     header h1 {
       margin: 32px;
@@ -58,6 +56,7 @@
       margin-bottom: 1.5em;
       margin-left:2.4em;      
     }
+    
     .container {
 	display: flex;
 	flex-direction: column;
@@ -114,9 +113,28 @@
 	text-align: left;
 	gap: 20px;
     }
+
+    img {
+	width: 200px;
+    }
+
+    .github-link {
+	position: fixed;
+	top: 152px;
+	right: 304px;
+	width: 20px;
+	height: 40px;
+    }
+
+    
   </style>
 </head>
 <body>
+  <div class="github-link">
+    <a class='btn' href="https://github.com/" target="_blank" rel="noopener">
+	<img width="20" src="imgs/github-mark-white.png"> GitHub </a>
+  </div>
+
   <header>
     <h1>
       <img width="160" src="imgs/GithubProfile.png">
@@ -127,37 +145,30 @@
   </header>
   <main>
     <div class='horizontal'>
-      <div class='container'>
-	<a class="btn" href="https://anyaprin.github.io/WebAppTest2"
+      <a class='btn' href="https://anyaprin.github.io/WebAppTest2"
 	   target="_blank" rel="noopener">
-	  <img width=200 src="GoldTartarGate.png">GATE OF GOLDEN TARTAR</a>
-	<p>作りかけを置いとく物置への門</p>
-      </div>
-      <div class='container'>
-	<a class="btn" href="https://anyaprin.github.io/TEST02"target="_blank" rel="noopener">	
-	  <img width=200 src="https://anyaprin.github.io/TEST02/test02.jpg">NyaLIZA</a>
+	  <img src="GoldTartarGate.png">GATE OF GOLDEN TARTAR
+      <p>作りかけを置いとく物置への門</p>
+      </a>
+      
+      <a class='btn' href="https://anyaprin.github.io/TEST02"target="_blank" rel="noopener">	
+	  <img src="https://anyaprin.github.io/TEST02/test02.jpg">NyaLIZA
 	    <P>猫に退行したELIZA</P>
-     	 </div>
-			      <div class='container'>
-	<a class="btn" href="https://anyaprin.github.io/WebAppTest2/dungeon0.2.5.html" target="_blank" rel="noopener">	
-	  <img width=200 src="https://anyaprin.github.io/imgs/dungeonwalking.png">ヒロシと40人の仲間たち</a>
-	    <P>ヒロシが迷宮内に潜む40人の仲間たちを探すゲーム……になる予定。いまはまだαバージョン以前です。なにも起きません(*´з`)</P>
-      </div>
-
-      <div class='container'>
-		  
-      <a class="btn" href="https://anyaprin.github.io/SaveTheOracle" target="_blank" rel="noopener">
-	<img height=200 src="imgs/SaveTheOracle.png"> Save The Oracle </a>
-      <p>いわゆる「箱入り娘」ゲーム。Web版製作中（放置中とも(;'∀')）
-	</div>
+      </a>
+      
+      <a class='btn'  href="https://anyaprin.github.io/WebAppTest2/dungeon0.2.5.html"
+	 target="_blank" rel="noopener">  <img src="imgs/dungeonwalking.png">ヒロシと40人の仲間たち
+	<P>ヒロシが40人の仲間を探すゲーム……になる予定。いまはまだαバージョン以前です。なにも起きません(*´з`)</P>
+      </a>
+      
+      <a class='btn' href="https://anyaprin.github.io/SaveTheOracle"
+	 target="_blank" rel="noopener">
+	<img src="imgs/SaveTheOracle.png"> Save The Oracle </a>
     </div>
-	  <br><br><br><br>
-
-   </main>
-
-	<footer>
-	  <hr>
-	      <a class="btn" href="https://www.youtube.com/channel/UCGXwU84wrTfxenv-3RI2w6w"
+  </main>
+  <footer>
+    <hr>
+    <a class="btn" href="https://www.youtube.com/channel/UCGXwU84wrTfxenv-3RI2w6w"
 	 target="_blank" rel="noopener">
 			  <iframe width="194" height="108"
 	      src="https://www.youtube.com/embed/X1dOWWNB5pY?si=xDzCXR-XttL_Cr-P" 
@@ -165,12 +176,11 @@
 	      allow="accelerometer; autoplay; clipboard-write; encrypted-media;
 		     gyroscope; picture-in-picture; web-share" 
 	      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-      </iframe>		  </a>
-		<p>YouTube Channel <br>FF11,FF14のファン動画とかがあります</p>
-		<br>
-	    <a class="btn" href="https://github.com/" target="_blank" rel="noopener">
-      <img width="20" src="imgs/github-mark-white.png"> GitHub </a> 
-		<a class="btn" href="https://github.com/AnyaPrin" target="_blank" rel="noopener">
+			  </iframe>
+    </a>
+    <p>YouTube Channel <br>FF11,FF14のファン動画とかがあります</p>
+    <br>
+    <a href="https://github.com/AnyaPrin" target="_blank" rel="noopener">
       &copy; 2025 AnyaPrin / Powered by GitHub Pages </a>
   </footer>
 </body>
