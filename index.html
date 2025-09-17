@@ -72,53 +72,47 @@
 	  Gate Of Golden Tartar
 	  <img src="img/tartargate.png"></a>
       </div>
-    </main>    
+      <div class='container'>
+	<a class="btn" href="https://anyaprin.github.io/TEST02"target="_blank" rel="noopener">	
+	  <img width=200 src="https://anyaprin.github.io/TEST02/test02.jpg">NyaLIZA</a>
+	    <P>猫に退行したELIZA</P>
+     	 </div>
+			      <div class='container'>
+	<a class="btn" href="https://anyaprin.github.io/WebAppTest2/dungeon0.2.5.html" target="_blank" rel="noopener">	
+	  <img width=200 src="https://anyaprin.github.io/imgs/dungeonwalking.png">ヒロシと40人の仲間たち</a>
+	    <P>ヒロシが迷宮内に潜む40人の仲間たちを探すゲーム……になる予定。いまはまだαバージョン以前です。なにも起きません(*´з`)</P>
+      </div>
+
+      <div class='container'>
+		  
+      <a class="btn" href="https://anyaprin.github.io/SaveTheOracle" target="_blank" rel="noopener">
+	<img height=200 src="imgs/SaveTheOracle.png"> Save The Oracle </a>
+      <p>いわゆる「箱入り娘」ゲーム。Web版製作中（放置中とも(;'∀')）
+	</div>
+
     </div>
-    <div class="door-container">
-      <div id="left-door" class="door left-door"></div>
-      <div id="right-door" class="door right-door"></div>
-    </div>
-    <div id="tartar-check-container"></div>
-    <img id="toggle-door-button" src="../favicon.ico" alt="Toggle Door" width="32" height="32" style="display:none;">
-    <script src="tartarcheck.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-          const leftDoor = document.getElementById("left-door");
-          const rightDoor = document.getElementById("right-door");
-          const toggleButton = document.getElementById("toggle-door-button");
-          let isOpen = false;
-          let imgAspect = 1920 / 1080; 
-          const img = new window.Image();
-          img.src = '../img/gate.png';
-          img.onload = function() {
-              imgAspect = img.naturalWidth / img.naturalHeight;
-              leftDoor.style.backgroundImage = `url('${img.src}')`;
-              rightDoor.style.backgroundImage = `url('${img.src}')`;
-              resizeDoors();
-          };
+	  <br><br><br><br>
 
-          function resizeDoors() {
-              const winH = window.innerHeight;
-              const imgW = Math.round(winH * imgAspect);
-              const doorW = Math.floor(imgW / 2);
-              const rightDoorW = imgW - doorW;
+   </main>
 
-              leftDoor.style.width = doorW + "px";
-              rightDoor.style.width = rightDoorW + "px";
-              leftDoor.style.backgroundSize = imgW + "px " + winH + "px";
-              rightDoor.style.backgroundSize = imgW + "px " + winH + "px";
-              leftDoor.style.backgroundPosition = "left center";
-              rightDoor.style.backgroundPosition = "-" + doorW + "px center";
-          }
+	<footer>
+	  <hr>
 
-          window.addEventListener("resize", resizeDoors);
-
-          toggleButton.addEventListener("click", () => {
-              leftDoor.classList.toggle("open");
-              rightDoor.classList.toggle("open");
-              isOpen = !isOpen;
-          });
-      });
-    </script>
-  </body>
+	      <a class="btn" href="https://www.youtube.com/channel/UCGXwU84wrTfxenv-3RI2w6w"
+	 target="_blank" rel="noopener">
+			  <iframe width="194" height="108"
+	      src="https://www.youtube.com/embed/X1dOWWNB5pY?si=xDzCXR-XttL_Cr-P" 
+	      title="YouTube video player" frameborder="1" 
+	      allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+		     gyroscope; picture-in-picture; web-share" 
+	      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+      </iframe>		  </a>
+		<p>YouTube Channel <br>FF11,FF14のファン動画とかがあります</p>
+		<br>
+	    <a class="btn" href="https://github.com/" target="_blank" rel="noopener">
+      <img width="20" src="imgs/github-mark-white.png"> GitHub </a> 
+		<a class="btn" href="https://github.com/AnyaPrin" target="_blank" rel="noopener">
+      &copy; 2025 AnyaPrin / Powered by GitHub Pages </a>
+  </footer>
+</body>
 </html>
