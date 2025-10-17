@@ -1,0 +1,140 @@
+    body {
+      background: var(--bg-color);
+      color: var(--text-color);
+      margin: 24px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      padding: 40px, 40px, 40px, 40px; 
+    }
+    header {
+	width: 100%;
+	background: var(--panel-color);
+	padding: 16px 0 8px 0;
+	box-shadow: var(--shadow);
+	text-align: left;
+	border-bottom: 1px solid var(--border-color);
+	border-radius: 6px;
+    }
+    header h1 {
+      margin: 32px;
+      font-size: 2.2rem;
+      letter-spacing: 2px;
+    }
+    main {
+	width: 100%;
+	max-width: 600px;
+	margin-top: 40px;
+	padding: 32px 24px 24px 24px;
+	text-align: center;
+    }
+    h2 {
+      color: var(--accent-blue);
+      font-size: 1.5rem;
+      margin-bottom: 0.8em;
+    }
+    p {
+      font-size: 9pt;
+      line-height: 1.7;
+      margin-bottom: 1.5em;
+      margin-left:2.4em;      
+    }
+    
+    .container {
+	display: flex;
+	flex-direction: column;
+	width: 400px;
+	max-width: 400px;
+	margin-top: 20px;
+	padding: 16px 12px 12px 12px;
+	background: var(--panel-color);
+	border-radius: 6px;
+	box-shadow: var(--shadow);
+	border: 1px solid var(--border-color);
+	text-align: left;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.2em 0.2em; 
+      color: #fff;
+      background: var(--accent-green);
+      border-radius: 3px;
+      font-size: 0.81rem;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      transition: background 0.2s;
+      cursor: pointer;
+      gap:12px;
+    }
+    .btn:hover, .btn:focus {
+      background: var(--accent-blue);
+      outline: none;
+    }
+    footer {
+      margin-top: 50px;
+      color: #888;
+      font-size: 0.9em;
+      text-align: left;
+      opacity: 0.7;
+    }
+    @media (max-width: 700px) {
+      main {
+        max-width: 95vw;
+        padding: 20px 4vw;
+      }
+      header {
+        padding: 24px 0 12px 0;
+      }
+    }
+    .horizontal {
+	display:flex;
+	width: 500px;
+	max-width: 600px;
+	margin-top: 20px;
+	padding: 16px 12px 12px 12px;
+	text-align: left;
+	gap: 20px;
+    }
+
+
+    .github-link {
+	color: white;
+	position: fixed;
+	top: 100px;
+	right: 304px;
+	width: 20px;
+	height: 40px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.2em 0.2em; 
+      color: #fff;
+      background: var(--accent-green);
+      border-radius: 3px;
+      font-size: 0.81rem;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      transition: background 0.2s;
+      cursor: pointer;
+      gap:12px;
+    }
+    .btn:hover, .btn:focus {
+      background: var(--accent-blue);
+      outline: none;
+    }
+    img {
+	width: 200px;
+    }
+    img:hover, img:focus {
+	background: var(--accent-blue);
+	outline:none;
+	border-radius:50%;
+	border-width:5px;
+    }
+    a {color:white;
+       decoraton:none;
+       font-style:none;
+       text-decoration:none;}
